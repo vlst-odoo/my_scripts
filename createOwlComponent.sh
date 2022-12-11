@@ -11,7 +11,7 @@ export class ${name} extends Component {
     setup() {
     }
 }
-NavBar.template = '${name}'
+${name}.template = '${name}'
 export default { ${name} };
 " > $name/$name.js
 

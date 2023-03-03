@@ -5,13 +5,12 @@ mkdir $name
 echo "/** @odoo-module */
 
 const { Component } = owl;
-import { _t } from \"@web/core/l10n/translation\";
 
 export class ${name} extends Component {
+	static template = "${name}"
     setup() {
     }
 }
-${name}.template = '${name}'
 export default { ${name} };
 " > $name/$name.js
 
@@ -22,3 +21,5 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
     </t>
 </templates>
 " > $name/$name.xml
+echo "Your Component was created \n Don't forget to import it and to add it to the static components list in the parent component"
+

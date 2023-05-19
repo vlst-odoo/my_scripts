@@ -1,0 +1,30 @@
+{
+   "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Attach using Process Id",
+            "type": "python",
+            "request": "attach",
+            "processId": "${command:pickProcess}",
+            "justMyCode": true
+        },
+        {
+          "name": "ODOO SERVER",
+          "type": "python",
+          "request": "launch",
+          "stopOnEntry": false,
+          "python": "/usr/bin/python3",
+          "program": "${workspaceFolder}/odoo/odoo-bin",
+          "cwd": "${workspaceRoot}",
+          "env": {
+            "PYTHONPATH": "${workspaceFolder}",
+            "LANG": "en_US.UTF-8",
+            "PYTHONFAULTHANDLER": "1"
+          },
+          "args": [
+            "-c",
+            "${workspaceFolder}/odoo.conf",
+          ],
+        }
+    ]
+  }
